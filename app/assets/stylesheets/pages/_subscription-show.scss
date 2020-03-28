@@ -1,0 +1,169 @@
+.show-container {
+  display: flex;
+  align-items: stretch;
+  background-color: rgba(0, 0, 0, 0);
+
+  .right-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .percent-change {
+      align-self: flex-end;
+    }
+  }
+
+  .graph-wrapper {
+    flex-grow: 1;
+    background-color: white;
+    border: 1px solid #DFE0EB;
+    border-radius: 8px;
+  }
+}
+
+.app-info-container {
+  background-color: white;
+  border: 1px solid #DFE0EB;
+  border-radius: 8px;
+  margin-right: 29px;
+  width: 350px;
+  padding: 0 20px;
+
+  .app-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 150px;
+    border-bottom: 1px solid $lightest-gray;
+
+    .app-info-img {
+      width: auto;
+      height: 60px;
+      max-height: 60px;
+      max-width: 280px;
+    }
+  }
+  h4 {
+    margin-top: 10px;
+  }
+
+  h6 {
+    font-size: 12px;
+    font-weight: lighter;
+    opacity: 0.5;
+
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+}
+
+.app-info-group-detail {
+  margin: 30px 0;
+  color: $dark-gray;
+}
+
+.metrics-card:hover {
+  color: $primary;
+  border-color: $primary;
+
+  .card-top-text {
+    color: $primary;
+    transition: ease-in-out;
+  }
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: white;
+  color: $primary;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  width: 90px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: white;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: $primary;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: white;
+  text-decoration: none;
+}
+
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.tabs-saassy {
+  background: $success;
+
+  .nav-link {
+    padding: 24px 40px;
+    color: $white;
+    opacity: 1;
+    font-weight: 500;
+
+    &:hover {
+      background-color: $white;
+      color: $light-text;
+    }
+
+    &.active {
+      border-color: transparent !important;
+      opacity: 1;
+    }
+  }
+}
+
+.tab-pane {
+  height: 100%;
+}
+
+.fadeDown {
+  animation: fadeIn 0.5s both;
+}
+
+
+@keyframes fadeIn {
+  // 0% {height: 0; opacity: 0}
+  // 100% {height: 60px; opacity: 1}
+  0% {transform: translateY(-15px); opacity: 0}
+  100% {transform: translateY(0px); opacity: 1}
+}

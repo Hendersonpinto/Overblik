@@ -1,0 +1,32 @@
+Employee_id,Department_id,Name,Email,Role,Company name
+1,Management,John Johnson,john@company.com,CEO,Digital Stars
+2,Management,Karin Hansen,karin@company.com,Chief of Sales & Marketing,Digital Stars
+3,Management,Anita Petersen,anita@company.com,Chief of Product & Engineering & IT,Digital Stars
+4,Management,Charlie Hunter,charlie@company.com,Chief of Finance & Admin & Processes,Digital Stars
+5,Product,Anna Johansen,anna@company.com,Product Manager,Digital Stars
+6,Product,Mildred Benson  ,Mildred@company.com,Designer,Digital Stars
+7,Engineering,Vanessa Shetley ,Vanessa@company.com,Front-end programmer,Digital Stars
+8,Engineering,Carol Philpot  ,Carol@company.com,Front-end programmer,Digital Stars
+9,Engineering,Drucilla Melody ,Drucilla@company.com,Front-end programmer,Digital Stars
+10,Engineering,Claudette Balcom,Claudette@company.com,Back-end programmer,Digital Stars
+11,Engineering,Virgie Eichelber,Virgie@company.com,Back-end programmer,Digital Stars
+12,Engineering,Maisie Stork  ,Maisie@company.com,Back-end programmer,Digital Stars
+13,IT/Ops,Renate Story  ,Renate@company.com,IT engineer,Digital Stars
+14,IT/Ops,Tenisha Mcclinto,Tenisha@company.com,IT engineer,Digital Stars
+15,Accounting and Finance,Angelina Denson ,Angelina@company.com,Bookkeeper,Digital Stars
+16,Marketing,Rene Dunlap  ,Rene@company.com,In-bound marketing rep,Digital Stars
+17,Marketing,Rodger Ridgley,Rodger@company.com,Out-bound marketing rep,Digital Stars
+18,Sales,Sebrina Seago,Sebrina@company.com,Sales Manager,Digital Stars
+19,Sales,Reina Ribble,Reina@company.com,Sales Manager,Digital Stars
+20,Sales,Stacee Sciacca,Stacee@company.com,Sales Development Rep,Digital Stars
+21,Sales,Nan Nall,Nan@company.com,Sales Development Rep,Digital Stars
+22,Sales,Tona Trotter,Tona@company.com,Sales Operations Manager,Digital Stars
+23,Sales,Arianne Auyeung,Arianne@company.com,Sales Engineer,Digital Stars
+24,Sales,Shonda Stillwagon,Shonda@company.com,Customer Success Manager,Digital Stars
+25,Sales,Dollie Dingman,Dollie@company.com,Customer Success Manager,Digital Stars
+26,Sales,Belkis Bostwick,Belkis@company.com,Account Development Manager,Digital Stars
+27,Sales,Iraida Igoe,Iraida@company.com,On-boarding Manager,Digital Stars
+28,Sales,Margarette Mikkelson,Margarette@company.com,On-boarding Manager,Digital Stars
+29,Customer Service,Jennifer Jurgens,Jennifer@company.com,Customer Support rep,Digital Stars
+30,Customer Service,Shellie Strickland,Shellie@company.com,Customer Support rep,Digital Stars
+31,Technical Support,Donn Ducote,Donn@company.com,Technical Support rep,Digital Stars

@@ -1,35 +1,56 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+<div id="navbar-container">
+  <div class="left-items">
+    <div class="breadcrumbs">
+      <% if content_for(:title) != "Dashboard" && content_for(:title) != "Company Licenses" && content_for(:title) != "Usage"%>
+      <%= link_to "< Back", :back %>
+      <% end %>
+      <h2 class="main-title"><%= content_for(:title) %></h2>
+    </div>
+    <% if user_signed_in? %>
+    <div class="dropdown">
+      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="icons">
+        <i id="notification-bell" class="far fa-bell"></i>
+        <!-- <span class="badge badge-pill badge-danger">1</span> -->
+      </div>
+      </a>
+      <%# <div id="slack-icon" hidden>
+          <%= image_tag License.find_by(name: "Slack").logo_url, alt: "Slack", class: "app-logo" %>
+      <%# </div> %>
+      <div id="notification-feed" class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left" aria-labelledby="dropdownMenuLink">
+        <!-- <a class="dropdown-item flex-column" href="#">
+          <div class="d-flex justify-content-center align-items-center py-2">
+            <%#= image_tag License.find_by(name: "Slack").logo_url, alt: "Slack", class: "app-logo" %>
+            <div class="ml-2">Slack - Request sent to Mike Peterson</div>
+          </div>
+        </a> -->
+      </div>
+    </div>
+    <%= link_to '../letter_opener', target: "_blank" do %>
+    <div class="icons">
+       <i style="font-size: 24px;" class="fas fa-inbox"></i>
+    </div>
     <% end %>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <div class="icons">
+      <i style="font-size: 24px;" class="fas fa-cog"></i>
+    </div>
+  </div>
+  <div class="right-items">
+    <span class="divider"></span>
+    <h3><%= "#{current_user.first_name} #{current_user.last_name}" %></h3>
 
+    <div class="dropdown">
+      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="" class="avatar">
+      </a>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
-    </ul>
+      <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left" aria-labelledby="dropdownMenuLink">
+        <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+      </div>
+    </div>
+    <% end %>
   </div>
 </div>
+
+

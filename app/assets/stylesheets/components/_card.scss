@@ -1,0 +1,23 @@
+.card-container {
+  background-color: $white;
+  border-radius: 8px;
+  border: 1px solid $light-gray-secondary;
+}
+
+.card-title {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.card-img-container {
+  margin: 20px 0;
+
+  img {
+    max-height: 70px;
+    height: auto;
+  }
+}
+
+.p-horiz-50 {
+  padding: 0 100px;
+}

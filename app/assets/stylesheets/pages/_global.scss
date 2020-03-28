@@ -1,0 +1,51 @@
+html, body, .dashboard-container {
+  width: 100vw;
+  height: 100%;
+  font-family: $font-Poppins;
+}
+
+#dashboard-container {
+  display: flex;
+  background-color: $dashboard-bg;
+  min-height: 100vh;
+}
+
+#dashboard-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: $white;
+  display: flex;
+  z-index: 100;
+  flex-direction: column;
+  box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
+}
+
+#dashboard-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+}
+
+#dashboard-left, #dashboard-right {
+  transition: $transition-all;
+}
+
+main#content {
+  padding: 30px;
+}
+
+.main-nav {
+  margin-left: $left-nav-open;
+}
+
+.main-no-nav {
+  margin-left: $left-nav-closed;
+}
+
+.m-bottom-30 {
+  margin-bottom: 30px;
+}
