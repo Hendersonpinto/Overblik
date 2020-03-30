@@ -17,6 +17,11 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'rails-ujs'
 gem 'jquery-rails'
+gem 'simple_calendar'
+gem "chartkick"
+gem "groupdate"
+gem "highcharts-rails"
+gem 'letter_opener_web', '~> 1.0'
 
 
 group :development do
