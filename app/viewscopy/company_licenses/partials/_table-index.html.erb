@@ -1,0 +1,41 @@
+<table
+  class="card-container table-container table-styled"
+  data-toggle="table"
+  data-search="true"
+  data-sort-name="<%= @sort_header %>"
+  data-sort-order="<%= @sort_order %>">
+  <thead>
+    <tr>
+      <th data-field="name" data-sortable="true">Application</th>
+      <th data-field="nDep" data-sortable="true">N. Dep</th>
+      <th data-field="category" data-sortable="true">Category</th>
+      <th data-field="vendor" data-sortable="true">Vendor</th>
+      <th data-field="expense" data-sortable="true">Expense</th>
+      <th data-field="LSize" data-sortable="true">L. Size</th>
+      <th data-field="LUsed" data-sortable="true">L. Used</th>
+      <th data-field="util" data-sortable="true">Utilization</th>
+      <th data-field="SPotential" data-sortable="true">Savings potential</th>
+    </tr>
+    <tbody>
+      <%# <% @licenses_aggregated.each do |license| %> %>
+      <%# <tr> %>
+        <%# <td class="table-row-name"> %>
+          <%# <p style="display: none;"><%= license[:application] %></p> %>
+          <%# <%= link_to company_license_path(license[:id]) do %> %>
+            <%# <%= license[:application] %> %>
+          <%# <% end %> %>
+        <%# </td> %>
+        <%# <td><%= license[:departments] %></td> %>
+        <%# <td><%= license[:category] %></td> %>
+        <%# <td><%= license[:vendor] %></td> %>
+        <%# <td class="expense-td"><%= license[:expense] %></td> %>
+        <%# <td><%= license[:capacity] %></td> %>
+        <%# <td><%= license[:usage] %></td> %>
+        <%# <td><%= license[:utilization] %>%</td> %>
+        <%# <td> € %>
+          <%# <%= ((100 - license[:utilization].to_i) * license[:expense].to_i / 100) %></td> %>
+      <%# </tr> %>
+      <%# <% end %> %>
+    </tbody>
+  </thead>
+</table>

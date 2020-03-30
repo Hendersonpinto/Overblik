@@ -1,0 +1,20 @@
+<div class="admin_index_header">
+  <h1>Edit Vendor</h1>
+</div>
+<div class="half">
+  <div>
+    <%= simple_form_for(@vendor, url: admin_vendor_path(@vendor)) do |f| %>
+      <% if @vendor.errors.any? %>
+        <div class="errors-container">
+          <ul>
+            <% @vendor.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= f.input :name, label: "Name", placeholder: @vendor %>
+      <%= f.submit 'Edit Vendor', class: 'btn btn-primary',  id: 'booking-btn' %>
+    <% end %>
+  </div>
+</div>

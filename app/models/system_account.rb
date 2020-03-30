@@ -1,0 +1,2 @@
+class SystemAccount < ApplicationRecord
+end

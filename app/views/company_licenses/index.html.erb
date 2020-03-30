@@ -1,0 +1,12 @@
+<% content_for(:title, "Company Licenses") %>
+<div id="company-licenses-top" class="top-section-container">
+  <div class="top-section-title">
+    <div class="section-metric-group">
+      <h2>Company Licenses<%#= @licenses_aggregated.count %></h2>
+      <p>Applications</p>
+    </div>
+  </div>
+</div>
+<div id="company-licenses-table">
+  <%= render "company_licenses/partials/table-index", locals: { licenses: @licenses_aggregated } %>
+</div>

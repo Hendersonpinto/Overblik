@@ -1,0 +1,70 @@
+<div class="admin_index_header">
+  <div>
+    <h1>Plans</h1><span class="count">Total: <%= @plans.count unless !@plans %></span>
+  </div>
+  <%= link_to "Add Plan", admin_plans_new_path, class: "btn btn-success" %>
+</div>
+<div>
+  <table
+    class="card-container table-container table-styled"
+    data-toggle="table"
+    data-search="true"
+    data-sort-name="<%= @sort_header %>"
+    data-sort-order="<%= @sort_order %>">
+    <thead>
+      <tr>
+        <th data-field="id" data-sortable="true">Id</th>
+        <th data-field="vendor_id" data-sortable="true">Vendor Id</th>
+        <th data-field="product_line" data-sortable="true">Product Line</th>
+        <th data-field="name" data-sortable="true">Name</th>
+        <th data-field="price" data-sortable="true">Price</th>
+        <th data-field="currency" data-sortable="true">Currency</th>
+        <th data-field="user_capacity" data-sortable="true">User Capacity</th>
+        <th data-field="description" data-sortable="true">Description</th>
+        <th data-field="billing_cycle" data-sortable="true">Billing Cycle</th>
+        <th data-field="cancellation" data-sortable="true">Cancellation</th>
+        <th data-field="actions" class="table-action-td"></th>
+      </tr>
+      <tbody>
+        <% unless !@plans || @plans.empty? %>
+          <% @plans.each do |plan| %>
+            <tr>
+              <%= link_to admin_dashboard_path do %>
+                <td><%= plan.id %></td>
+                <td><%= plan.vendor_id %></td>
+                <td><%= plan.product_line %></td>
+                <td><%= plan.name %></td>
+                <td><%= plan.price %></td>
+                <td><%= plan.currency %></td>
+                <td><%= plan.user_capacity %></td>
+                <td><%= plan.description %></td>
+                <td><%= plan.billing_cycle %></td>
+                <td><%= plan.cancellation %></td>
+                <td class="table-action-td">
+                  <%= link_to admin_plan_path(plan), class: "table-icon-link" do %>
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.9974 5.99886C12.9974 7.58771 11.653 8.87572 9.99457 8.87572C8.33617 8.87572 6.99177 7.58771 6.99177 5.99886C6.99177 4.40999 8.33617 3.12199 9.99457 3.12199C11.653 3.12197 12.9974 4.41001 12.9974 5.99886ZM10 0.00878906C8.28292 0.0164057 6.5031 0.434423 4.81827 1.23474C3.5673 1.85344 2.34817 2.72634 1.2899 3.80376C0.770133 4.35374 0.107183 5.15011 0 5.99979C0.0126667 6.73581 0.802167 7.64427 1.2899 8.19584C2.28228 9.23094 3.46967 10.0795 4.81827 10.7655C6.38945 11.528 8.12853 11.967 10 11.9914C11.7187 11.9837 13.4981 11.5609 15.1811 10.7655C16.4321 10.1468 17.6518 9.27326 18.7101 8.19584C19.2299 7.64586 19.8928 6.84947 20 5.99979C19.9873 5.26377 19.1978 4.35527 18.7101 3.80372C17.7177 2.76862 16.5297 1.92074 15.1811 1.23471C13.6107 0.472772 11.8674 0.0367724 10 0.00878906ZM9.99873 1.49626C12.6007 1.49626 14.71 3.51282 14.71 6.00044C14.71 8.48804 12.6007 10.5046 9.99873 10.5046C7.39675 10.5046 5.28748 8.48802 5.28748 6.00044C5.28748 3.51282 7.39675 1.49626 9.99873 1.49626Z" fill="#838FA0"/>
+                    </svg>
+                  <% end %>
+                  <%= link_to admin_plan_edit_path(plan), class: "table-icon-link" do %>
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 10.5V13H2.5L9.87333 5.62662L7.37333 3.12662L0 10.5ZM11.8067 3.69329C12.0667 3.43329 12.0667 3.01329 11.8067 2.75329L10.2467 1.19329C9.98667 0.933291 9.56667 0.933291 9.30667 1.19329L8.08667 2.41329L10.5867 4.91329L11.8067 3.69329Z" fill="#838FA0"/>
+                    </svg>
+                  <% end %>
+                  <%= link_to admin_plan_path(plan),
+                    method: :delete,
+                    data: { confirm: "Are you sure?"},
+                    class: "table-icon-link" do %>
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.999674 10.6667C0.999674 11.4 1.59967 12 2.33301 12H7.66634C8.39967 12 8.99967 11.4 8.99967 10.6667V2.66667H0.999674V10.6667ZM9.66634 0.666667H7.33301L6.66634 0H3.33301L2.66634 0.666667H0.333008V2H9.66634V0.666667Z" fill="#838FA0"/>
+                    </svg>
+                  <% end %>
+                </td>
+              <% end %>
+            </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </thead>
+  </table>
+</div>

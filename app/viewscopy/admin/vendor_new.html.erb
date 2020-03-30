@@ -1,0 +1,24 @@
+<div class="admin_index_header">
+  <h1>New Vendor</h1>
+</div>
+<div class="half">
+  <div>
+    <%= simple_form_for(@vendor, url: admin_vendors_path) do |f| %>
+      <% if @vendor.errors.any? %>
+        <div class="errors-container">
+          <ul>
+            <% @vendor.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= f.input :name, label: "Name", placeholder: "Vendor name" %>
+      <%= f.submit 'Create Vendor', class: 'btn btn-primary',  id: 'booking-btn' %>
+    <% end %>
+  </div>
+  <div class="pathfix-container">
+    <h5>Or upload via CSV</h5>
+    <button class="btn btn-success">Upload CSV</button>
+  </div>
+</div>

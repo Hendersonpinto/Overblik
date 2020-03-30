@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%= if content_for?(:title) then yield(:title) + ' | ' end %>Admin</title>
+    <%= favicon_link_tag asset_path('favicon.png') %>
+    <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
+  </head>
+  <body>
+      <div class="admin_header">
+        <div class="admin_header_left">
+          <span>DB Admin</span>
+        </div>
+        <div class="admin_header_right">
+          <div class="admin_logout_container">
+            <%= link_to "Logout", admin_dashboard_path %>
+          </div>
+        </div>
+      </div>
+      <div class="admin_container">
+        <nav class="admin_nav">
+          <%= link_to admin_dashboard_path do %>
+            <h3>Dashboard</h3>
+          <% end %>
+          <h3 class="nav-arrow">Tables</h3>
+          <ul class="admin_nav-links">
+            <li>
+              <h4>Companies</h4>
+              <ul>
+                <%= link_to admin_companies_path do %>
+                  <li>Companies</li>
+                <% end %>
+                <%= link_to admin_users_path do %>
+                  <li>Users</li>
+                <% end %>
+                <%= link_to admin_departments_path do %>
+                  <li>Departments</li>
+                <% end %>
+              </ul>
+            </li>
+            <li>
+              <h4>Licenses</h4>
+              <ul>
+                <%= link_to admin_company_licenses_path do %>
+                  <li>Company Licenses</li>
+                <% end %>
+                <%= link_to admin_license_transactions_path do %>
+                  <li>License Transactions</li>
+                <% end %>
+                <%= link_to admin_plans_path do %>
+                  <li>Plans</li>
+                <% end %>
+                <%= link_to admin_vendors_path do %>
+                  <li>Vendors</li>
+                <% end %>
+                <%= link_to admin_vendor_contacts_path do %>
+                  <li>Vendor Contacts</li>
+                <% end %>
+                <%= link_to admin_categories_path do %>
+                  <li>Categories</li>
+                <% end %>
+                <%= link_to admin_sub_categories_path do %>
+                  <li>Sub Categories</li>
+                <% end %>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="admin_content_container">
+          <%= render 'shared/flashes' %>
+          <%= yield %>
+        </div>
+      </div>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+  </body>
+</html>

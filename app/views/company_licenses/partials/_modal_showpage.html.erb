@@ -1,0 +1,62 @@
+<div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Request review</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">From</label>
+          <input class="form-control" type="text" placeholder="susan@company.com" readonly>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">To</label>
+          <input class="form-control" type="text" placeholder="mike@company.com" readonly>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Message</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="15">Dear Mike
+
+We have detected a potential opportunity to reduce spending for a software subscription you have purchased:
+
+Application: Slack
+License usage: 47%
+License expense: € 33.120
+Purchased license size: 230 seats
+Licenses actively used: 110 seats
+Purchase date: 12-12-2018
+Billing cycle: Yearly
+
+The estimated savings potential for the license is: € 17.553
+
+Please review this license purchase and evaluate if the number of licenses can be reduced to align with the number of active Slack users in your team.
+
+Be aware that the license renew in 12 days on December 12 2019.
+
+Click here to report actions taken to optimize the license expense.
+
+Click here for more detailed information on the Slack licenses you have purchased.
+
+Click here to get help to run a survey within your team to know which applications they are actively using.
+
+Best regards,
+
+Susan Saas
+          </textarea>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button id="send_review" type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<% content_for(:title, "Integrations") %>
+<div id="company-licenses-top" class="top-section-container">
+  <div class="top-section-title">
+    <h3>Here are some ways you can import data about your licences.</h3>
+  </div>
+</div>
+<div id="company-licenses-table">
+  <div class="metrics-cards-container">
+    <div class="metrics-cards-container-row">
+      <%= render partial: "company_licenses/partials/card_integrations_btn", locals: {
+        title: "Upload any File",
+        img: "icons/integrations_1.png",
+        text: "Forward your emailed receipts to emailscan@saas247.io and we will automatically transcribe the saas app name, date and amount.",
+        cta: "Upload"
+      } %>
+      <%= render partial: "company_licenses/partials/card_integrations_btn", locals: {
+        title: "Connect Saas Services",
+        img: "icons/integrations_2.png",
+        text: "Connect your Saas services to start getting smarter.",
+        cta: "Connect"
+      } %>
+    </div>
+    <div class="metrics-cards-container-row">
+      <%= render partial: "company_licenses/partials/card_integrations_btn", locals: {
+        title: "Connect Email",
+        img: "icons/integrations_3.png",
+        text: "Forward your emailed receipts to emailscan@saas247.io and we will automatically transcribe the saas app name, date and amount.",
+        cta: "Send"
+      } %>
+      <%= render partial: "company_licenses/partials/card_integrations_btn", locals: {
+        title: "Connect Financial System",
+        img: "icons/integrations_4.png",
+        text: "Integrate directly with your book-keeping and accounting system.",
+        cta: "Connect"
+      } %>
+    </div>
+    <div class="metrics-cards-container-row">
+      <%= render partial: "company_licenses/partials/card_integrations_btn", locals: {
+        title: "Connect Bank",
+        img: "icons/integrations_4.png",
+        text: "Integrate directly with your bank accounts to automatically recognise statements from Saas services.",
+        cta: "Connect Bank"
+      } %>
+      <%= render partial: "company_licenses/partials/card_integrations_btn", locals: {
+        title: "Import Manually",
+        img: "icons/integrations_5.png",
+        text: "Add licences manually one-by-one or in batch.",
+        cta: "Import"
+      } %>
+    </div>
+  </div>
+</div>
+

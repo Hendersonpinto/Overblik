@@ -1,0 +1,23 @@
+<div class="big-metrics-card card-actions">
+  <div class="metrics-header">
+    <div class="header-content">
+      <h4>Insights and Actions</h4>
+    </div>
+  </div>
+  <div class="actions-frame">
+      <% ["You can cancel unused licenses to reduce the total software subscription cost by 21%", "You can reduce your Slack license costs by 53 %. Mike Peterson's license is the least used.", "7 subscriptions are up for renewal next month for a total cost of €45.100.", "License usage data was last updated and reviewed 187 days ago.", "Engineering (56,5%) and IT (66,7%) are the departments with the most unused licenses.", "Licenses for 7 new applications have been purchased within the last 30 days."].each do |insight| %>
+      <div class="action-item">
+        <div class="action-left">
+          <div class="action-status"></div>
+          <p class="action-message"><%= insight %></p>
+        </div>
+        <div class="action-button">
+          <%# <% slack = CompanyLicense.find_by(license_id: License.find_by(name: "Slack")) %> %>
+          <%# <%= link_to company_license_path(slack), class: "btn btn-table btn-success btn-action" do %> %>
+            See more
+          <%# <% end %> %>
+        </div>
+      </div>
+      <% end %>
+  </div>
+</div>

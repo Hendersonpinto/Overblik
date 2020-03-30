@@ -1,0 +1,59 @@
+<% content_for(:title, "Csv upload") %>
+<div id="company-licenses-top" class="top-section-container">
+  <div class="top-section-title">
+    <h3>Please select the datatype you are importing.</h3>
+  </div>
+</div>
+<div id="company-licenses-table">
+  <div class="metrics-cards-container">
+    <div class="metrics-cards-container-row">
+      <%= render partial: "company_licenses/partials/card_integrations_btn_csv", locals: {
+        title: "Companies",
+        img: "icons/integrations_1.png",
+        button_id: "flatfile-company",
+        text: "Upload companies using a CSV file.",
+        cta: "Upload"
+      } %>
+      <%= render partial: "company_licenses/partials/card_integrations_btn_csv", locals: {
+        title: "Departments",
+        img: "icons/integrations_1.png",
+        button_id: "flatfile-department",
+        text: "Upload departments using a CSV file.",
+        cta: "Upload"
+      } %>
+    </div>
+    <div class="metrics-cards-container-row">
+      <%= render partial: "company_licenses/partials/card_integrations_btn_csv", locals: {
+        title: "Users",
+        img: "icons/integrations_1.png",
+        button_id: "flatfile-user",
+        text: "Upload users using a CSV file.",
+        cta: "Upload"
+      } %>
+      <%= render partial: "company_licenses/partials/card_integrations_btn_csv", locals: {
+        title: "Vendors",
+        img: "icons/integrations_1.png",
+        button_id: "flatfile-vendor",
+        text: "Upload vendors using a CSV file.",
+        cta: "Upload"
+      } %>
+    </div>
+    <div class="metrics-cards-container-row">
+        <%= render partial: "company_licenses/partials/card_integrations_btn_csv", locals: {
+        title: "Vendor Contacts",
+        img: "icons/integrations_1.png",
+        button_id: "flatfile-contact",
+        text: "Upload vendor contacts using a CSV file.",
+        cta: "Upload"
+      } %>
+        <%= render partial: "company_licenses/partials/card_integrations_btn_csv", locals: {
+        title: "Employees",
+        img: "icons/integrations_1.png",
+        button_id: "flatfile-employee",
+        text: "Upload employees using a CSV file.",
+        cta: "Upload"
+      } %>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,8 @@
+ <% @employees.each do |employee| %>
+          <h1> <%= "#{employee.first_name} #{employee.last_name}"%></h1>
+          <h3> <%= employee.company.name%></h3>
+          <h3> <%= employee.department.name%></h3>
+          <h3> <%= employee.role%></h3>
+          <h3> <%= employee.email%></h3>
+
+<% end %>

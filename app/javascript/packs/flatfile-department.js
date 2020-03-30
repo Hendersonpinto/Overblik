@@ -1,6 +1,5 @@
 import FlatfileImporter from 'flatfile-csv-importer';
 import $ from 'jquery';
-import moment from 'moment';
 import currencyCodes from './currency';
 console.log('hello from department')
 FlatfileImporter.setVersion(2);

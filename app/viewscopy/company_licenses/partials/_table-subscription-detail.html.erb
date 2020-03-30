@@ -1,0 +1,232 @@
+<table
+  class="card-container table-container table-styled"
+  data-toggle="table"
+  data-search="true"
+  data-sort-name="name">
+  <thead>
+    <!-- <tr>
+      <th data-field="owner" data-sortable="true">Owner</th>
+      <th data-field="department" data-sortable="true">Department</th>
+      <th data-field="expense" data-sortable="true">Expense</th>
+      <th data-field="LSize" data-sortable="true">L. Size</th>
+      <th data-field="LUsed" data-sortable="true">L. Used</th>
+      <th data-field="utilization" data-sortable="true">Utilization</th>
+      <th data-field="billingCycle" data-sortable="true">Billing Cycle</th>
+      <th data-field="startDate" data-sortable="true">Start Date</th>
+      <th data-field="renewalDate" data-sortable="true">Renewal Date</th>
+      <th data-field="potentialSaving" data-sortable="true">P. Savings</th>
+      <th data-field="alert">Alert</th>
+    </tr> -->
+
+    <tr>
+      <th data-field="owner" data-sortable="true">Owner</th>
+      <th data-field="department" data-sortable="true">Department</th>
+      <th data-field="LSize" data-sortable="true">L. Size</th>
+      <th data-field="LUsed" data-sortable="true">L. Used</th>
+      <th data-field="utilization" data-sortable="true">L. Usage</th>
+      <th data-field="billingCycle" data-sortable="true">Billing Cycle</th>
+      <th data-field="renewalDate" data-sortable="true">Renewal</th>
+      <th data-field="expense" data-sortable="true">Expense</th>
+      <th data-field="potentialSaving" data-sortable="true">P. Savings</th>
+      <!-- <th data-field="potentialSaving" data-sortable="true">P. Savings</th> -->
+      <th data-field="action"></th>
+    </tr>
+    <tbody id= "table-body">
+      <%# licenseTransactions.each do |transaction| %>
+
+      <tr>
+
+        <td class="table-row-name"> Mike Peterson </td>
+        <td>Engineering</td>
+        <td>230</td>
+        <td>108</td>
+         <td><p style="display: none;">47</p><span class="badge badge-pill badge-danger"> 47 % </span></td>
+        <td>Yearly</td>
+        <td>2019-12-12</td>
+        <td class="table-price">33.120</td>
+        <!-- <td>€ 285 </td> -->
+
+        <td><span class="badge badge-pill badge-primary"> € 23.040 </span></td>
+        <td class="action">
+          <button id="review-entry" type="button" class="btn btn-table btn-success" data-toggle="modal" data-target="#reviewModal"> Request Review</button>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td class="table-row-name"> Rob Morrison </td>
+        <td>IT</td>
+        <td>160</td>
+        <td>91</td>
+         <td><p style="display: none;">56</p><span class="badge badge-pill badge-warning"> 56 % </span></td>
+        <td>Monthly</td>
+        <td>2019-12-07</td>
+        <td class="table-price">38.400</td>
+        <td><span class="badge badge-pill badge-primary"> € 9.285 </span></td>
+        <td class="action"> <span class="btn btn-table btn-success"> Request Review</span>
+        <!-- <td class="toggle-alert">
+          <label class="switch">
+            <input type="checkbox" <%#= ['', 'checked="checked"'].sample %>>
+            <span class="slider round"></span>
+          </label>
+        </td> -->
+      </tr>
+
+      <tr>
+        <td class="table-row-name"> Peter Albridge </td>
+        <td>Marketing</td>
+        <td>35</td>
+        <td>25</td>
+         <td><p style="display: none;">72</p><span class="badge badge-pill badge-warning"> 72 % </span></td>
+        <td>Monthly</td>
+        <td>2019-12-23</td>
+        <td class="table-price">15.360</td>
+        <!-- <td>€ 285 </td> -->
+        <td><span class="badge badge-pill badge-primary"> € 5.040 </span></td>
+        <td class="action"> <span class="btn btn-table btn-success"> Request Review</span>
+        </td>
+      </tr>
+
+       <tr>
+        <td class="table-row-name"> Carol Anderson </td>
+        <td>Support</td>
+        <td>47</td>
+        <td>39</td>
+         <td><p style="display: none;">83</p><span class="badge badge-pill badge-success"> 83 % </span></td>
+        <td>Montly</td>
+        <td>2019-12-23</td>
+        <td class="table-price">10.220</td>
+        <!-- <td>€ 285 </td> -->
+        <td><span class="badge badge-pill badge-primary"> € 6.768 </span></td>
+        <td class="action"> <span class="btn btn-table btn-success"> Request Review</span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="table-row-name"> Susan Saas </td>
+        <td>Finance</td>
+        <td>15</td>
+        <td>13</td>
+        <td><p style="display: none;">92</p><span class="badge badge-pill badge-success"> 92 % </span></td>
+        <td>Yearly</td>
+        <td>2019-12-23</td>
+        <td class="table-price">17.748</td>
+        <!-- <td>€ 285 </td> -->
+        <td><span class="badge badge-pill badge-primary"> € 2.160 </span></td>
+        <td class="action"> <span class="btn btn-table btn-success"> Request Review</span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="table-row-name"> Kathrine Hudson </td>
+        <td>HR</td>
+        <td>7</td>
+        <td>6</td>
+        <td><p style="display: none;">97</p><span class="badge badge-pill badge-success"> 97% </span></td>
+        <td>Yearly</td>
+        <td>2019-12-23</td>
+        <td class="table-price"> 8.015</td>
+        <!-- <td>€ 285 </td> -->
+        <td><span class="badge badge-pill badge-primary"> € 1.008 </span></td>
+        <td class="action"> <span class="btn btn-table btn-success"> Request Review</span>
+        </td>
+      </tr>
+
+
+
+
+
+      <!-- <tr>
+        <td class="table-row-name"><%#= "#{transaction.owner.first_name} #{transaction.owner.last_name}" %></td>
+        <td><%#= transaction.owner.department %></td>
+        <td class="table-price"><%#= transaction.total_purchase_price %></td>
+        <td><%#= transaction.user_licenses_purchased %></td>
+        <#%
+          user_licenses_used = rand((transaction.user_licenses_purchased / 1.3)..transaction.user_licenses_purchased).floor
+          utilization = ((user_licenses_used * 100) / transaction.user_licenses_purchased)
+        %>
+        <td><%#= user_licenses_used %></td>
+        <td><%#= utilization %>%</td>
+        <td><%#= transaction.commitment_period %></td>
+        <td><%#= transaction.purchase_date %></td>
+        <td><%#= transaction.expiry_date %></td>
+        <td class="table-price"><%#= transaction.total_purchase_price * (100 - utilization) / 100  %></td>
+        <td class="toggle-alert">
+          <label class="switch">
+            <input type="checkbox" <%#= ['', 'checked="checked"'].sample %>>
+            <span class="slider round"></span>
+          </label>
+        </td>
+      </tr> -->
+      <%# end %>
+    </tbody>
+  </thead>
+</table>
+<%= render partial: "company_licenses/partials/modal_showpage" %>
+
+<script>
+
+  const slackIcon = document.getElementById("slack-icon")
+  const slackIconClone = slackIcon.cloneNode(true).innerHTML;
+
+  const tableBody = document.getElementById('table-body');
+  const send_button = document.getElementById('send_review');
+  const notificationFeed = document.getElementById('notification-feed');
+  const notificationBell = document.getElementById('notification-bell');
+
+  notificationBell.addEventListener('click', (event) => {
+      notificationBell.innerHTML = ""
+    });
+
+  let alreadySent = false;
+
+  send_button.addEventListener('click', (event) => {
+
+    if (alreadySent === false) {
+      const review_button = document.getElementById('review-entry');
+      review_button.classList.toggle('btn-success');
+      review_button.style.background = "grey";
+      review_button.style.color = "white";
+      review_button.innerText = "Review pending";
+
+      // notificationFeed.insertAdjacentHTML("afterbegin","<a class='dropdown-item flex-column' href='#'><div class='d-flex justify-content-start align-items-center py-2'>" + slackIconClone +
+      //   "<div class='ml-2'>Slack - Request sent to Mike Peterson</div></div></a>");
+
+      // notificationBell.insertAdjacentHTML("afterbegin",
+      // "<span class='badge badge-pill badge-danger'>1</span>")
+
+      alreadySent = true;
+    }
+  });
+
+  let alreadyPressed = false;
+
+   document.addEventListener('keyup', (event) => {
+
+      const review_button = document.getElementById('review-entry');
+      const key = event.key || event.keyCode;
+
+      if (alreadyPressed === false && alreadySent === true) {
+        if (key === 'm' || key === 'm' || key === 109) {
+          tableBody.insertAdjacentHTML("afterbegin","<tr class='fadeDown'><td class='table-row-name'> Mike Peterson </td><td>Engineering</td><td>115</td><td>108</td><td><p style='display: none;'>94</p><span class='badge badge-pill badge-success'> 94 % </span></td><td>Monthly</td><td>2019-12-29</td><td class='table-price'>16.550</td><td><span class='badge badge-pill badge-primary'> € 153 </span></td><td class='action'><button type='button' class='btn btn-table btn-success' data-toggle='modal' data-target='#reviewModal'> Request Review</button></td></tr>");
+          review_button.classList.toggle('btn-success');
+          review_button.style.background = "grey";
+          review_button.style.color = "white";
+          review_button.innerText = "Processed";
+
+          notificationBell.insertAdjacentHTML("afterbegin",
+        "<span class='badge badge-pill badge-danger'>1</span>")
+        notificationFeed.insertAdjacentHTML("afterbegin","<a class='dropdown-item flex-column' href='#'><div class='d-flex justify-content-start align-items-center py-2'>" + slackIconClone +
+        "<div class='ml-2'>Slack - Mike Peterson updated license</div></div></a>");
+
+          alreadyPressed = true;
+        }
+
+      }
+
+
+    });
+
+</script>
+
+
