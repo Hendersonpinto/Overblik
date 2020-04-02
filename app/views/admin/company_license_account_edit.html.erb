@@ -3,6 +3,21 @@
 </div>
 <div class="half">
   <div>
-
+    <%= simple_form_for(@company_license_account, url: admin_company_license_account_path(@company_license_account)) do |f| %>
+      <% if @company_license_account.errors.any? %>
+        <div class="errors-container">
+          <ul>
+            <% @company_license_account.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= f.input :company_license_id, label: "company_license_id"%>
+      <%= f.input :user_id, label: "user_id"%>
+      <%= f.input :active, label: "active"%>
+      <%= f.input :access_permission, label: "Access Permission"%>
+      <%= f.submit 'Create Company License Account', class: 'btn btn-primary',  id: 'booking-btn' %>
+    <% end %>
   </div>
 </div>

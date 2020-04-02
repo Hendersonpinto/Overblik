@@ -3,6 +3,27 @@
 </div>
 <div class="half">
   <div>
+    <%= simple_form_for(@plan, url: admin_plans_path) do |f| %>
+      <% if @plan.errors.any? %>
+        <div class="errors-container">
+          <ul>
+            <% @plan.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= f.association :vendor, label: "vendor_id", placeholder: "Plan vendor_id", prompt: "Choose a Vendor" %>
+      <%= f.input :price, label: "price", placeholder: "Plan price" %>
+      <%= f.input :users_capacity, label: "users_capacity", placeholder: "Plan users_capacity" %>
+      <%= f.input :name, label: "Name", placeholder: "Plan name" %>
+      <%= f.input :description, label: "description", placeholder: "Plan description" %>
+      <%= f.input :billing_cycle, label: "billing_cycle", placeholder: "Plan billing_cycle" %>
+      <%= f.input :currency, label: "currency", placeholder: "Plan currency" %>
+      <%= f.input :cancellation, label: "cancellation", placeholder: "Plan cancellation" %>
+      <%= f.input :product_line, label: "product_line", placeholder: "Plan product_line" %>
+      <%= f.submit 'Create Plan', class: 'btn btn-primary',  id: 'booking-btn' %>
+    <% end %>
   </div>
   <div class="pathfix-container">
     <h5>Or upload via CSV</h5>

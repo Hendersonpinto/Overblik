@@ -17,6 +17,7 @@
         <th data-field="email" data-sortable="true">Email</th>
         <th data-field="first_name" data-sortable="true">First Name</th>
         <th data-field="last_name" data-sortable="true">Last Name</th>
+        <th data-field="role" data-sortable="true">Role</th>
         <th data-field="company_id" data-sortable="true">Company Id</th>
         <th data-field="department" data-sortable="true">Department</th>
         <th data-field="actions" class="table-action-td"></th>
@@ -30,8 +31,9 @@
                 <td><%= user.email %></td>
                 <td><%= user.first_name %></td>
                 <td><%= user.last_name %></td>
-                <td><%= user.company_id %></td>
-                <td><%= user.department %></td>
+                <td><%= user.role %></td>
+                <td><%= user.company_id %><span class="light ml-2"><%= user.company.name %></span></td>
+                <td><%= user.department_id %><span class="light ml-2"><%= user.department.name %></span></td>
                 <td class="table-action-td">
                   <%= link_to admin_user_path(user), class: "table-icon-link" do %>
                     <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">

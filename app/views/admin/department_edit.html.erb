@@ -3,6 +3,18 @@
 </div>
 <div class="half">
   <div>
-
+    <%= simple_form_for(@department, url: admin_department_path(@department)) do |f| %>
+      <% if @department.errors.any? %>
+        <div class="errors-container">
+          <ul>
+            <% @department.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= f.input :name, label: "Name", placeholder: @department %>
+      <%= f.submit 'Edit department', class: 'btn btn-primary',  id: 'booking-btn' %>
+    <% end %>
   </div>
 </div>

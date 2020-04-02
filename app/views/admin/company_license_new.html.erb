@@ -3,6 +3,24 @@
 </div>
 <div class="half">
   <div>
+    <%= simple_form_for(@company_license, url: admin_company_licenses_path) do |f| %>
+      <% if @company_license.errors.any? %>
+        <div class="errors-container">
+          <ul>
+            <% @company_license.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= f.input :owner_id, label: "owner_id", placeholder: "company_license owner_id" %>
+      <%= f.input :plan_id, label: "plan_id", placeholder: "company_license plan_id" %>
+      <%= f.input :company_id, label: "company_id", placeholder: "company_license company_id" %>
+      <%= f.input :name, label: "Name", placeholder: "company_license name" %>
+      <%= f.input :logo, label: "logo", placeholder: "company_license logo" %>
+      <%= f.input :company_id, label: "company_id", placeholder: "company_license company_id" %>
+      <%= f.submit 'Create company_license', class: 'btn btn-primary',  id: 'booking-btn' %>
+    <% end %>
   </div>
   <div class="pathfix-container">
     <h5>Or upload via CSV</h5>
