@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :super_admins
   get 'errors/show'
   devise_for :users
+  # devise_for :super_admins
   root to: 'pages#index'
 
   resources :company_licenses
@@ -10,7 +12,7 @@ Rails.application.routes.draw do
   post '/create_results', to: 'company_licenses#create_results'
   get '/show_results/:vendor_id', to: 'company_licenses#show_results', as: 'show_results'
   # get '/show_results', to: 'company_licenses#show_results', as: 'show_results', :defaults => { :format => 'json' }
-  
+
   resources :license_usages, only: [:create]
   # post 'usage', to: 'license_usages#create'
   get 'usage/new/:user_id', to: 'license_usages#new', as: 'new_survey'
@@ -33,9 +35,14 @@ Rails.application.routes.draw do
   post '/create_user', to: 'flatfiles#create_user'
   post '/create_employee', to: 'flatfiles#create_employee'
 
+  # Onboarding
+  get '/onboarding/welcome', to: 'onboarding#welcome'
+  get '/onboarding/select-apps', to: 'onboarding#select_apps'
+  post '/onboarding/select-apps', to: 'onboarding#apps_create'
 
   # Admin routes
   get 'admin/dashboard', to: 'admin#dashboard'
+  get 'admin' => redirect("admin/dashboard")
 
   # categories
   get 'admin/categories', to: 'admin#categories_index'
@@ -171,6 +178,6 @@ Rails.application.routes.draw do
   get '/csv', to: 'integrations#csv'
   get '/log-in', to: 'pages#log-in'
   get 'flatfile', to: 'pages#flatfile', as: 'flatfile'
-  
-  
+
+
 end

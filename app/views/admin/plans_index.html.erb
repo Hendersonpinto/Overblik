@@ -19,7 +19,7 @@
         <th data-field="name" data-sortable="true">Name</th>
         <th data-field="price" data-sortable="true">Price</th>
         <th data-field="currency" data-sortable="true">Currency</th>
-        <th data-field="user_capacity" data-sortable="true">User Capacity</th>
+        <th data-field="users_capacity" data-sortable="true">Users Capacity</th>
         <th data-field="description" data-sortable="true">Description</th>
         <th data-field="billing_cycle" data-sortable="true">Billing Cycle</th>
         <th data-field="cancellation" data-sortable="true">Cancellation</th>
@@ -31,12 +31,12 @@
             <tr>
               <%= link_to admin_dashboard_path do %>
                 <td><%= plan.id %></td>
-                <td><%= plan.vendor_id %></td>
+                <td><%= plan.vendor_id %><span class="light ml-2"><%= plan.vendor.name %></span></td>
                 <td><%= plan.product_line %></td>
                 <td><%= plan.name %></td>
                 <td><%= plan.price %></td>
                 <td><%= plan.currency %></td>
-                <td><%= plan.user_capacity %></td>
+                <td><%= plan.users_capacity %></td>
                 <td><%= plan.description %></td>
                 <td><%= plan.billing_cycle %></td>
                 <td><%= plan.cancellation %></td>

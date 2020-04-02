@@ -1,8 +1,27 @@
 <div class="admin_index_header">
-  <h1>New Vendor Contact</h1>
+  <h1>New Vendor_contact Contact</h1>
 </div>
 <div class="half">
   <div>
+    <%= simple_form_for(@vendor_contact, url: admin_vendor_contacts_path) do |f| %>
+      <% if @vendor_contact.errors.any? %>
+        <div class="errors-container">
+          <ul>
+            <% @vendor_contact.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= f.input :vendor_id, label: "Vendor_id", placeholder: "Vendor Id" %>
+      <%= f.input :first_name, label: "First Name", placeholder: "First Name" %>
+      <%= f.input :last_name, label: "Last_Name", placeholder: "Last name" %>
+      <%= f.input :email, label: "Email", placeholder: "Email" %>
+      <%= f.input :mobile, label: "Mobile", placeholder: "Mobile" %>
+      <%= f.input :role, label: "Role", placeholder: "Role" %>
+      <%= f.input :notes, label: "Notes", placeholder: "Notes" %>
+      <%= f.submit 'Create Vendor_contact', class: 'btn btn-primary',  id: 'booking-btn' %>
+    <% end %>
   </div>
   <div class="pathfix-container">
     <h5>Or upload via CSV</h5>

@@ -3,6 +3,24 @@
 </div>
 <div class="half">
   <div>
+    <%= simple_form_for(@company, url: admin_companies_path) do |f| %>
+      <% if @company.errors.any? %>
+        <div class="errors-container">
+          <ul>
+            <% @company.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= f.input :name, label: "Name", placeholder: "company name" %>
+      <%= f.input :website, label: "Website", placeholder: "company website" %>
+      <%= f.input :address, label: "Address", placeholder: "company address" %>
+      <%= f.input :city, label: "City", placeholder: "City" %>
+      <%= f.input :postal_zip, label: "Postal Zip Code", placeholder: "Postal zip" %>
+      <%= f.input :country, as: :string, label: "Country", placeholder: "Country" %>
+      <%= f.submit 'Create company', class: 'btn btn-primary',  id: 'booking-btn' %>
+    <% end %>
   </div>
   <div class="pathfix-container">
     <h5>Or upload via CSV</h5>

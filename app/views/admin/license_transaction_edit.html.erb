@@ -3,6 +3,22 @@
 </div>
 <div class="half">
   <div>
-
+    <%= simple_form_for(@license_transaction, url: admin_license_transaction_path(@license_transaction)) do |f| %>
+      <% if @license_transaction.errors.any? %>
+        <div class="errors-container">
+          <ul>
+            <% @license_transaction.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= f.input :owner_id, label: "owner_id", placeholder: "license_transaction owner_id" %>
+      <%= f.input :company_license_id, label: "company_license_id", placeholder: "license_transaction company_license_id" %>
+      <%= f.input :total_purchase, label: "total_purchase", placeholder: "license_transaction total_purchase" %>
+      <%= f.input :purchase_date, label: "purchase_date", placeholder: "license_transaction purchase_date" %>
+      <%= f.input :expiry_date, label: "expiry_date", placeholder: "license_transaction expiry_date" %>
+      <%= f.submit 'Edit license_transaction', class: 'btn btn-primary',  id: 'booking-btn' %>
+    <% end %>
   </div>
 </div>

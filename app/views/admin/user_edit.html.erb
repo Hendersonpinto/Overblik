@@ -3,6 +3,26 @@
 </div>
 <div class="half">
   <div>
-
+    <div>
+      <%= simple_form_for(@user, url: admin_user_path(@user)) do |f| %>
+        <% if @user.errors.any? %>
+          <div class="errors-container">
+            <ul>
+              <% @user.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <%= f.input :first_name, label: "First Name", placeholder: "First name" %>
+        <%= f.input :last_name, label: "Last Name", placeholder: "Last name" %>
+        <%= f.input :email, label: "Email", placeholder: "Email" %>
+        <%= f.input :password, label: "Password", placeholder: "Password" %>
+        <%= f.input :company_id, label: "Company Id", placeholder: "Company Id" %>
+        <%= f.input :department_id, label: "Department Id", placeholder: "Department Id" %>
+        <%= f.input :role, label: "Role", placeholder: "Role" %>
+        <%= f.submit 'Create user', class: 'btn btn-primary',  id: 'booking-btn' %>
+      <% end %>
+    </div>
   </div>
 </div>

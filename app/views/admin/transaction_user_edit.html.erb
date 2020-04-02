@@ -3,6 +3,19 @@
 </div>
 <div class="half">
   <div>
-
+    <%= simple_form_for(@transaction_user, url: admin_transaction_user_path(@transaction_user)) do |f| %>
+      <% if @transaction_user.errors.any? %>
+        <div class="errors-container">
+          <ul>
+            <% @transaction_user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= f.input :user_id, label: "user_id", placeholder: "transaction_user user_id" %>
+      <%= f.input :license_transaction_id, label: "license_transaction_id", placeholder: "transaction_user license_transaction_id" %>
+      <%= f.submit 'Edit transaction_user', class: 'btn btn-primary',  id: 'booking-btn' %>
+    <% end %>
   </div>
 </div>

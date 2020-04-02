@@ -3,6 +3,19 @@
 </div>
 <div class="half">
   <div>
-
+    <%= simple_form_for(@category, url: admin_category_path(@category)) do |f| %>
+      <% if @category.errors.any? %>
+        <div class="errors-container">
+          <ul>
+            <% @category.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= f.input :name, label: "Name", placeholder: @category %>
+      <%= f.input :icon, label: "icon", placeholder: @category %>
+      <%= f.submit 'Edit Category', class: 'btn btn-primary',  id: 'booking-btn' %>
+    <% end %>
   </div>
 </div>

@@ -1,6 +1,6 @@
 <div class="admin_index_header">
   <h1>Vendor Contacts</h1>
-  <%= link_to "Add Vendor", admin_vendors_new_path, class: "btn btn-success" %>
+  <%= link_to "Add Vendor Contact", admin_vendor_contacts_new_path, class: "btn btn-success" %>
 </div>
 <div>
   <table
@@ -12,7 +12,13 @@
     <thead>
       <tr>
         <th data-field="id" data-sortable="true">Id</th>
-        <th data-field="license_id" data-sortable="true">Name</th>
+        <th data-field="vendor_id" data-sortable="true">Vendor Id</th>
+        <th data-field="first_name" data-sortable="true">First Name</th>
+        <th data-field="last_name" data-sortable="true">Last Name</th>
+        <th data-field="email" data-sortable="true">Email</th>
+        <th data-field="mobile" data-sortable="true">Mobile</th>
+        <th data-field="role" data-sortable="true">Role</th>
+        <th data-field="notes" data-sortable="true">Notes</th>
         <th data-field="actions" class="table-action-td"></th>
       </tr>
       <tbody>
@@ -21,7 +27,12 @@
             <tr>
               <%= link_to admin_dashboard_path do %>
                 <td><%= vendor_contact.id %></td>
-                <td><%= vendor_contact.name %></td>
+                <td><%= vendor_contact.first_name %></td>
+                <td><%= vendor_contact.last_name %></td>
+                <td><%= vendor_contact.email %></td>
+                <td><%= vendor_contact.mobile %></td>
+                <td><%= vendor_contact.role %></td>
+                <td><%= vendor_contact.notes %></td>
                 <td class="table-action-td">
                   <%= link_to admin_vendor_contact_path(vendor_contact), class: "table-icon-link" do %>
                     <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">

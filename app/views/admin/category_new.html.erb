@@ -3,6 +3,20 @@
 </div>
 <div class="half">
   <div>
+    <%= simple_form_for(@category, url: admin_categories_path) do |f| %>
+      <% if @category.errors.any? %>
+        <div class="errors-container">
+          <ul>
+            <% @category.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= f.input :name, label: "Name", placeholder: "Name" %>
+      <%= f.input :icon, label: "Icon", placeholder: "Icon" %>
+      <%= f.submit 'Create Category', class: 'btn btn-primary',  id: 'booking-btn' %>
+    <% end %>
   </div>
   <div class="pathfix-container">
     <h5>Or upload via CSV</h5>

@@ -1,1 +1,7 @@
-<h1><%= @user %></h1>
+<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+<div>
+  <p>Email: <%= @user.email unless @user.email.empty? %></p>
+  <p>Role: <%= @user.role unless @user.role.empty? %></p>
+  <p>Company: Id <%= @user.company_id if @user.company_id %> — <%= @user.company.name if @user.company_id %></p>
+  <p>Department: Id <%= @user.department_id if @user.department_id %> — <%= @user.department.name if @user.department_id %></p>
+</div>
