@@ -1,0 +1,16 @@
+<div class="top_message">
+  <div class="message_left">
+    <h1>Welcome, Susan</h1>
+    <p>We’re glad to see you here.</p>
+  </div>
+  <div class="message_right">
+    <%= image_tag "art/welcome.png", alt: "alttext" %>
+  </div>
+</div>
+<div class="paragraph">
+  <h3>Ready to begin?</h3>
+  <p>To get the most out of our platform we need some information.
+  Please, follow the upcoming steps with the most accurate data so we can set your account up and running.</p>
+  <p>You can skip steps if you’re not sure and complete the data later.</p>
+</div>
+<%= link_to "Get Started", onboarding_welcome_path, class: "btn btn-primary" %>

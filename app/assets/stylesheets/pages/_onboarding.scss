@@ -1,0 +1,173 @@
+.column {
+  position: relative;
+  min-height: 700px;
+
+  &.onboarding {
+    background: #393836;
+  }
+}
+
+.progress_list {
+  padding: 70px 25px;
+  color: #fff;
+
+  li {
+    opacity: 0.2;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: bold;
+
+    &.completed, &.active {
+      opacity: 1;
+    }
+
+    &.completed {
+      .progress_step_number {
+        background: #fff;
+      }
+    }
+  }
+
+  .progress_step_number {
+    width: 32px;
+    height: 32px;
+    display: inline;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  p {
+    display: inline;
+    margin-left: 15px;
+  }
+}
+
+.w260 {
+  width: 260px;
+}
+
+.column_bottom_elements {
+  position: absolute;
+  padding: 25px;
+  color: #fff;
+  bottom: 0;
+  width: 100%;
+
+  .btn {
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .btn-primary {
+    background-color: #1A937D !important;
+    width: 100%;
+
+    &:hover {
+      background-color: #1A8E79 !important;
+    }
+  }
+}
+
+hr {
+  background: #C4C4C4;
+  opacity: 0.3;
+  margin: 25px 0;
+}
+
+a.btn_skip {
+  font-size: 14px;
+  opacity: 0.4;
+  color: #fff;
+  float: right;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  svg {
+    margin-left: 6px;
+  }
+}
+
+.progress_label {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.progress_status {
+  font-size: 12px;
+  margin-bottom: 45px;
+}
+
+.progress_bar-container {
+  width: 100%;
+  height: 4px;
+  background: #C4C4C4;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.progress_bar {
+  height: 100%;
+  width: 25%;
+  background: #26B5F8;
+  border-radius: 2px;
+}
+
+.top_message {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.3);
+  margin-bottom: 45px;
+
+  h1 {
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  h1 + p {
+    margin: 20px 0 45px 0;
+    font-size: 16px;
+    line-height: 150%;
+    color: #41424D;
+  }
+
+  .message_left {
+    margin-top: 40px;
+    max-width: 500px;
+  }
+
+  .message_right {
+    display: flex;
+    align-items: center;
+
+    img {
+      max-height: 200px;
+      max-width: 300px;
+    }
+  }
+}
+
+.mt40 {
+  margin-top: 40px;
+}
+
+.paragraph {
+  max-width: 500px;
+  line-height: 140%;
+
+  h3 {
+    font-weight: 900;
+    font-size: 16px;
+  }
+
+  p {
+    margin-top: 30px;
+    font-size: 14px;
+  }
+}

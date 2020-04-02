@@ -38,7 +38,13 @@ Rails.application.routes.draw do
   # Onboarding
   get '/onboarding/welcome', to: 'onboarding#welcome'
   get '/onboarding/select-apps', to: 'onboarding#select_apps'
-  post '/onboarding/select-apps', to: 'onboarding#apps_create'
+  post '/onboarding/select-apps', to: 'onboarding#select_apps_create'
+  get '/onboarding/define-plans', to: 'onboarding#define_plans'
+  post '/onboarding/define-plans', to: 'onboarding#define_plans_create'
+  get '/onboarding/add-employees', to: 'onboarding#add_employees'
+  post '/onboarding/add-employees', to: 'onboarding#add_employees_create'
+  get '/onboarding/associate-users', to: 'onboarding#associate_users'
+  post '/onboarding/associate-users', to: 'onboarding#associate_users_create'
 
   # Admin routes
   get 'admin/dashboard', to: 'admin#dashboard'
