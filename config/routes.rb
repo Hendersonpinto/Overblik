@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :super_admins
-  get 'errors/show'
-  devise_for :users
   # devise_for :super_admins
+  devise_for :super_admins, path: 'super_admins'
+  get 'errors/show'
+    # Manually overriding the controllers routes in order to use custom ones
+  devise_for :users, path: 'users', controllers: { sessions: "users/sessions", registrations: "users/registrations"}
   root to: 'pages#index'
 
   resources :company_licenses
