@@ -4,13 +4,15 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-  
-   <%= f.input :company_name,
+  <%= f.fields_for :company do |sc| %>
+    <%= sc.input :name,
                 required: true,
                 autofocus: true,
                 placeholder:'Acme corporation',
                 label:'Company',
                 input_html: { autocomplete: "company" }%>
+  <% end %>
+   
     <%= f.input :email,
                 required: true,
                 autofocus: true,
