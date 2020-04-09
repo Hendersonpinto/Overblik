@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get 'errors/show'
     # Manually overriding the controllers routes in order to use custom ones
   devise_for :users, path: 'users', controllers: { sessions: "users/sessions", registrations: "users/registrations"}
+  namespace :user do
+    root :to => "company_licenses#dashboard"
+  end
   root to: 'pages#index'
 
   resources :company_licenses
