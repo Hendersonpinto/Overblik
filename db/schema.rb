@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2020_04_02_102422) do
   end
 
   create_table "companies", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.string "website"
     t.string "address"
     t.string "city"
@@ -204,6 +204,7 @@ ActiveRecord::Schema.define(version: 2020_04_02_102422) do
     t.string "city"
     t.string "postal_zip"
     t.string "country"
+    t.string "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

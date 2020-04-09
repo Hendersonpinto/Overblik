@@ -7,6 +7,7 @@ class CreateVendors < ActiveRecord::Migration[6.0]
       t.string :city
       t.string :postal_zip
       t.string :country
+      t.string :category
 
       t.timestamps
     end
