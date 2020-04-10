@@ -156,7 +156,7 @@ class String
     puts "Created #{Company.all.count} companies"
     
     puts "Creating departments"
-      departments =["Sales"]
+      departments =["Sales", "Finance", "IT", "HR", "Engineering"]
       departments.each do |department|
         Department.create!(name:department)
       end
