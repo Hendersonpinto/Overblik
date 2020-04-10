@@ -1,1 +1,37 @@
 <h1>Onboarding - Add Employees</h1>
+
+
+
+<%= simple_form_for(@employee, as: :employee, method: :post, url: onboarding_add_employees_path) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :first_name,
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "First Name" } %>
+                 <%= f.input :last_name,
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "Last Name" } %>
+                <%= f.input :email,
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "Email" } %>
+                 <%= f.input :mobile,
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "Mobile number" } %>
+                       <%= f.input :role,
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "Role" } %>
+                 <%= f.input :department_id, collection: @departments,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "Department" } %>
+    
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Create Employee" %>
+  </div>
+<% end %>
